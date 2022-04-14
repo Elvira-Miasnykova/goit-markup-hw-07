@@ -1,0 +1,103 @@
+.page-header {
+        border-bottom: 1px solid #ececec;
+
+        &__container {
+            @extend %container;
+            display: flex;
+            align-items: center;
+        
+        }
+        &__logo {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+        &__logo--color {
+            color: $logo-color;
+        }
+}
+
+.main-nav {
+    margin-left: 93px;
+
+    &__list {
+        display: flex;
+       
+    }
+    &__item{
+        @extend %list-item;
+    }
+    &__link--color {
+        @extend %nav__link;
+        color: $title-txcolor;
+    }
+    &__link--color:hover,
+    &__link--color:focus {
+        color: $accent-color;
+    }
+
+    &__link--current {
+            color: $accent-color;
+        }
+    
+    &__list--underline {
+        position: relative;
+    }
+
+    &__list--underline::after {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        content: "";
+        bottom: -1px;
+
+        background: $accent-color;
+        border-radius: 2px;
+    }
+}
+
+.auth-nav {
+    display: flex;
+    margin-left: auto;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        @extend %list-item;
+    }
+    &__link--color {
+        @extend %nav__link;
+        color: $primery-txcolor;
+    }  
+    &__link--color:hover,
+    &__link--color:focus {
+        color: $accent-color;
+    }  
+
+    &__icon-envelope {
+        display: inline-block;
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        fill: currentColor;
+    
+        background-position: center;
+    }
+    
+    &__icon-envelope:hover {
+        fill: $accent-color;
+    }
+    
+    &__icon-smartphone {
+        display: inline-block;
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+        fill: currentColor;
+    
+        background-position: center;
+    }
+    
+    &__icon-smartphone:hover {
+        fill: $accent-color;
+    }
+}
